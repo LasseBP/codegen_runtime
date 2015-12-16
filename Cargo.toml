@@ -1,0 +1,9 @@
+[package]
+name = "codegen_runtime"
+version = "0.2.0"
+authors = ["Lasse Brøsted Pedersen <lasse@huhej.dk>"]
+
+[dependencies]
+itertools = "0.4"
+rand = "0.3"
+lazy_static = "0.1"
