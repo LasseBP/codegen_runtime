@@ -157,8 +157,8 @@ impl<T: Hash + fmt::Display + Any> fmt::Display for Seq<T> {
 		} else {
 			let item_string = self.inner.iter().map(|i| format!("{}",i))
 				   .collect::<Vec<_>>()
-				   .join("");
-        	write!(f, "{}", item_string)
+				   .join(", ");
+        	write!(f, "[{}]", item_string)
 		}
     }
 }
@@ -331,7 +331,7 @@ mod tests {
     fn display_formatting_chars() {
     	let s1_string = strseq!["foo"].to_string();
  	    
-        assert_eq!("[f, o, o]",s1_string);
+        assert_eq!("foo",s1_string);
     }    
     
     #[test]
