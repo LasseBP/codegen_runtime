@@ -15,12 +15,8 @@ impl F64 {
 		F64(self.0.abs())
 	}
 	
-	pub fn powf(&self, other: F64) -> F64 {
+	pub fn pow(&self, other: F64) -> F64 {
 		F64(self.0.powf(other.0))
-	}
-	
-	pub fn powi(&self, other: i32) -> F64 {
-		F64(self.0.powi(other))
 	}
 }
 
