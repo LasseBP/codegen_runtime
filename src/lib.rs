@@ -2,10 +2,10 @@
 
 extern crate rand;
 
-#[macro_use] 
+#[macro_use]
 extern crate lazy_static;
 
-#[macro_use] 
+#[macro_use]
 extern crate itertools;
 
 mod token;
@@ -17,7 +17,7 @@ mod map;
 mod util;
 mod f64_wrapper;
 
-//std libs
+// std libs
 pub mod IO;
 pub mod MATH;
 pub mod VDMUtil;
