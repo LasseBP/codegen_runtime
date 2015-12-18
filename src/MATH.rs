@@ -53,7 +53,7 @@ pub fn rand(top: i64) -> i64 {
     }
 
     let rnd = match RND.lock() {
-        Ok(refCell) => refCell,
+        Ok(rnd) => rnd,
         Err(poisoned) => poisoned.into_inner(),
     };
 	
@@ -68,7 +68,7 @@ pub fn srand2(seed: i64) -> i64 {
     let seedSlice: &[_] = &[seed as usize];
 
     let mut rnd = match RND.lock() {
-        Ok(refCell) => refCell,
+        Ok(rnd) => rnd,
         Err(poisoned) => poisoned.into_inner(),
     };
 
